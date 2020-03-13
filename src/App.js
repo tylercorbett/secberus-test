@@ -1,6 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+
+const Test = styled.div(props => ({
+  background: props.background,
+  height: '3rem',
+  width: '3rem',
+}))
 
 function App() {
   return (
@@ -18,6 +25,9 @@ function App() {
         >
           Learn React
         </a>
+        <Test background="red">
+          hello world
+        </Test>
       </header>
     </div>
   );
