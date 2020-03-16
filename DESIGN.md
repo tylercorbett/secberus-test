@@ -12,3 +12,7 @@ I divided some of the global styles up. I have a variables file that I would use
 #### Why no redux? 
 
 I didn't feel like I needed it. I'd rather just build the UI than spend a lot of time setting up Redux. If I were to expand on this app, I'd add Redux in for sure.
+
+#### Why only a master branch?
+
+I'm the only engineer on this project. In a production env I would create a PR into a development branch. From there we could merge dev into master for a release.
