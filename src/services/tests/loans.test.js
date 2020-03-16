@@ -31,13 +31,14 @@ describe('Loan service tests', () => {
     const response = await submitLoan(formData);
     expect(response).toEqual('Credit cannot be below 600');
   });
-  
-  it('Tests submitLoan function with credit that is too low', async () => {
+
+  it('Tests submitLoan function with price that is too high', async () => {
     const formData = {
       ...defaultFormData,
-      credit: 30,
+      price: 100000000000,
+      income: 1000000000000000
     }
     const response = await submitLoan(formData);
-    expect(response).toEqual('Credit cannot be below 600');
+    expect(response).toEqual('Bad request');
   });
 })
