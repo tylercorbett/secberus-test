@@ -7,7 +7,7 @@ import SignUp from './components/sign-up/SignUp';
 
 function App() {
 
-  const handleSubmit = formData => {
+  const handleQuoteSubmit = formData => {
     console.log(formData);
   };
 
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <header>Tyler's Auto Loans</header>
       {/* <Form 
-        onSubmit={handleSubmit}
+        onSubmit={handleQuoteSubmit}
       /> */}
       <SignUp/>
     </div>
