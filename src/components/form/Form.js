@@ -4,14 +4,26 @@ import * as FormComponents from './FormComponents';
 
 
 const Frame = styled.section(props => ({
-  background: 'red',
+  padding: '1rem',
+
+  '.column': {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    
+  },
 }))
 
 const Form = () => {
 
   return (
     <Frame>
-      <div>i am a form</div>
+      <div className="column">
+        <FormComponents.Label>
+          Auto Purchase Price
+        </FormComponents.Label>
+        <FormComponents.Input type="number"/>
+      </div>
     </Frame>
   );
 };
