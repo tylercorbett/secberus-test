@@ -3,14 +3,17 @@ import './App.scss';
 import './reset.css';
 import Form from './components/form/Form';
 import SignUp from './components/sign-up/SignUp';
+import { submitLoan } from './services/loans';
 
 
 function App() {
   const [isDisqualified, setIsDisqualified] = useState(false);
   const [isQuoteSubmitted, setIsQuoteSubmitted] = useState(false);
 
-  const handleQuoteSubmit = formData => {
-    console.log(formData);
+  const handleQuoteSubmit = async formData => {
+    const response = await submitLoan(formData).catch(console.error)
+
+    console.log(response, 'response');
   };
 
   return (
