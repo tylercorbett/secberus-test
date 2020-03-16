@@ -66,7 +66,7 @@ const Form = ({ onSubmit }) => {
           <FormComponents.Label>
             Estimated Credit Score
           </FormComponents.Label>
-          <FormComponents.Input onChange={event => setCredit(event.target.value)} type="number"/>
+          <FormComponents.Input min="300" max="850" onChange={event => setCredit(event.target.value)} type="number"/>
         </div>
       </FormComponents.InfoSection>
 
