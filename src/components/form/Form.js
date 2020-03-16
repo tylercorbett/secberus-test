@@ -6,12 +6,6 @@ import * as FormComponents from './FormComponents';
 const Frame = styled.form(props => ({
   padding: '1rem',
 
-  '.column': {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-
   'h2': {
     fontWeight: '700',
     fontSize: '1.7rem',
@@ -71,7 +65,7 @@ const Form = ({ onSubmit }) => {
           <FormComponents.Label>
             Purchase Price
           </FormComponents.Label>
-          <FormComponents.Input required={true} onChange={event => setPrice(event.target.value)} type="number"/>
+          <FormComponents.Input autoFocus required={true} onChange={event => setPrice(event.target.value)} type="number"/>
         </div>
         <div className="column">
           <FormComponents.Label>

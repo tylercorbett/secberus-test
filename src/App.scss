@@ -13,4 +13,10 @@
     letter-spacing: .1rem;
     margin-bottom: 1rem;
   }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
