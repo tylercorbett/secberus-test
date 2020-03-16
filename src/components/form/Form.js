@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import * as FormComponents from './FormComponents';
 
@@ -21,6 +21,14 @@ const Frame = styled.section(props => ({
 }))
 
 const Form = () => {
+  const [price, setPrice] = useState(null);
+  const [make, setMake] = useState(null);
+  const [model, setModel] = useState(null);
+  const [income, setIncome] = useState(null);
+  const [credit, setCredit] = useState(null);
+  
+
+
 
   return (
     <Frame>
@@ -30,19 +38,19 @@ const Form = () => {
           <FormComponents.Label>
             Auto Purchase Price
           </FormComponents.Label>
-          <FormComponents.Input type="number"/>
+          <FormComponents.Input onChange={event => setPrice(event.target.value)} type="number"/>
         </div>
         <div className="column">
           <FormComponents.Label>
             Auto Make
           </FormComponents.Label>
-          <FormComponents.Input type="text"/>
+          <FormComponents.Input onChange={event => setMake(event.target.value)} type="text"/>
         </div>
         <div className="column">
           <FormComponents.Label>
             Auto Model
           </FormComponents.Label>
-          <FormComponents.Input type="text"/>
+          <FormComponents.Input onChange={event => setModel(event.target.value)} type="text"/>
         </div>
       </FormComponents.InfoSection>
 
@@ -52,13 +60,13 @@ const Form = () => {
           <FormComponents.Label>
             Estimated Yearly Income
           </FormComponents.Label>
-          <FormComponents.Input type="number"/>
+          <FormComponents.Input onChange={event => setIncome(event.target.value)} type="number"/>
         </div>
         <div className="column">
           <FormComponents.Label>
             Estimated Credit Score
           </FormComponents.Label>
-          <FormComponents.Input type="number"/>
+          <FormComponents.Input onChange={event => setCredit(event.target.value)} type="number"/>
         </div>
       </FormComponents.InfoSection>
 
