@@ -12,7 +12,14 @@ function App() {
   const [quoteReponse, setQuoteResponse] = useState(null);
 
   const handleQuoteSubmit = async formData => {
-    const response = await submitLoan(formData).catch(console.error);
+    let response;
+    try {
+      response = await submitLoan(formData);
+    }
+    catch(err) {
+      console.error(err);
+      return;
+    }
     
     if (response !== 'Good quote') {
       setIsDisqualified(true);
