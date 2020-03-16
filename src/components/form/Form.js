@@ -18,8 +18,16 @@ const Frame = styled.section(props => ({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     background: 'coral',
-    padding: '1rem',
+    padding: '2rem 1rem',
     margin: '1.5rem 0',
+    backgroundColor: '#f7f7f7',
+  },
+
+  'h2': {
+    fontWeight: '700',
+    fontSize: '1.7rem',
+    textAlign: 'center',
+    
   },
 }))
 
@@ -27,6 +35,7 @@ const Form = () => {
 
   return (
     <Frame>
+      <h2>Auto Info</h2>
       <section className="info-section">
         <div className="column">
           <FormComponents.Label>
@@ -48,6 +57,7 @@ const Form = () => {
         </div>
       </section>
 
+      <h2>User Info</h2>
       <section className="info-section">
         <div className="column">
           <FormComponents.Label>
