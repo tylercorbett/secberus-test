@@ -21,13 +21,14 @@ const Frame = styled.section(props => ({
     padding: '2rem 1rem',
     margin: '1.5rem 0',
     backgroundColor: '#f7f7f7',
+    borderRadius: '.2rem',
   },
 
   'h2': {
     fontWeight: '700',
     fontSize: '1.7rem',
     textAlign: 'center',
-    
+
   },
 }))
 
@@ -72,6 +73,8 @@ const Form = () => {
           <FormComponents.Input type="number"/>
         </div>
       </section>
+
+      <FormComponents.Button>SUBMIT</FormComponents.Button>
     </Frame>
   );
 };

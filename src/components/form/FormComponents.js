@@ -11,3 +11,21 @@ export const Label = styled.label(props => ({
   margin: '.5rem 0',
   fontSize: '1.5rem',
 }))
+
+export const Button = styled.button(props => ({
+  color: 'green',
+  border: '2px solid green',
+  borderRadius: '.2rem',
+  display: 'block',
+  margin: '.5rem auto',
+  fontSize: '2rem',
+  padding: '.2rem .8rem',
+  transition: 'all .2s ease-in-out',
+  background: 'transparent',
+
+  '&:hover': {
+    background: 'green',
+    color: 'white',
+    cursor: 'pointer',
+  },
+}))
