@@ -13,4 +13,13 @@ describe('Loan service tests', () => {
     const response = await submitLoan(defaultFormData);
     expect(response).toEqual('Good quote');
   });
+
+  it('Tests submitLoan function with an income that is too low', async () => {
+    const formData = {
+      ...defaultFormData,
+      income: 10,
+    }
+    const response = await submitLoan(formData);
+    expect(response).toEqual('Price cannot be greater than 1/5 of income');
+  });
 })
