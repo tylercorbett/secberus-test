@@ -22,4 +22,22 @@ describe('Loan service tests', () => {
     const response = await submitLoan(formData);
     expect(response).toEqual('Price cannot be greater than 1/5 of income');
   });
+
+  it('Tests submitLoan function with credit that is too low', async () => {
+    const formData = {
+      ...defaultFormData,
+      credit: 30,
+    }
+    const response = await submitLoan(formData);
+    expect(response).toEqual('Credit cannot be below 600');
+  });
+  
+  it('Tests submitLoan function with credit that is too low', async () => {
+    const formData = {
+      ...defaultFormData,
+      credit: 30,
+    }
+    const response = await submitLoan(formData);
+    expect(response).toEqual('Credit cannot be below 600');
+  });
 })
