@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import * as SignUpComponents from './SignUpComponents';
 import * as FormComponents from '../form/FormComponents';
 
 const Frame = styled.section(props => ({
@@ -37,6 +36,7 @@ const SignUp = () => {
 
     alert(`Sign up successful for user with details: username: ${username}, password: ${password}`)
   };
+
   return (
     <Frame>
       <h2>Create a new account</h2>
