@@ -18,6 +18,20 @@ const Frame = styled.form(props => ({
     textAlign: 'center',
 
   },
+
+  '.marketing': {
+    marginBottom: '3rem',
+
+    'img': {
+      width: '20rem',
+    },
+
+    'p': {
+      margin: '1rem 2rem',
+      width: '50%',
+      textAlign: 'center',
+    },
+  },
 }))
 
 const Form = ({ onSubmit }) => {
@@ -44,6 +58,13 @@ const Form = ({ onSubmit }) => {
     <Frame
       onSubmit={e => handleFormSubmit(e)}
     >
+
+      <div className="marketing column">
+        <img src="https://media.wired.com/photos/5d09594a62bcb0c9752779d9/master/pass/Transpo_G70_TA-518126.jpg" alt="Car" />
+        {/* Marketing copy can go here */}
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
       <h2>Auto Info</h2>
       <FormComponents.InfoSection>
         <div className="column">
