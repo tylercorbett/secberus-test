@@ -35,7 +35,7 @@ const SignUp = () => {
       return;
     }
 
-    alert('sign up good')
+    alert(`Sign up successful for user with details: username: ${username}, password: ${password}`)
   };
   return (
     <Frame>
