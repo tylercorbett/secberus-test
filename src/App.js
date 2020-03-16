@@ -7,7 +7,7 @@ import Form from './components/form/Form';
 function App() {
   return (
     <div className="App">
-      hello
+      <header>Tyler's Auto Loans</header>
       <Form />
     </div>
   );
