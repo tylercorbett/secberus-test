@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import * as FormComponents from './FormComponents';
 
 
-const Frame = styled.section(props => ({
+const Frame = styled.form(props => ({
   padding: '1rem',
 
   '.column': {
@@ -28,29 +28,41 @@ const Form = ({ onSubmit }) => {
   const [credit, setCredit] = useState(null);
   
 
+  const handleFormSubmit = e => {
+    e.preventDefault();
 
+    onSubmit({
+      price,
+      make,
+      model,
+      income,
+      credit
+    })
+  }
 
   return (
-    <Frame>
+    <Frame
+      onSubmit={e => handleFormSubmit(e)}
+    >
       <h2>Auto Info</h2>
       <FormComponents.InfoSection>
         <div className="column">
           <FormComponents.Label>
             Purchase Price
           </FormComponents.Label>
-          <FormComponents.Input onChange={event => setPrice(event.target.value)} type="number"/>
+          <FormComponents.Input required={true} onChange={event => setPrice(event.target.value)} type="number"/>
         </div>
         <div className="column">
           <FormComponents.Label>
             Make
           </FormComponents.Label>
-          <FormComponents.Input onChange={event => setMake(event.target.value)} type="text"/>
+          <FormComponents.Input required onChange={event => setMake(event.target.value)} type="text"/>
         </div>
         <div className="column">
           <FormComponents.Label>
             Model
           </FormComponents.Label>
-          <FormComponents.Input onChange={event => setModel(event.target.value)} type="text"/>
+          <FormComponents.Input required onChange={event => setModel(event.target.value)} type="text"/>
         </div>
       </FormComponents.InfoSection>
 
@@ -60,24 +72,18 @@ const Form = ({ onSubmit }) => {
           <FormComponents.Label>
             Estimated Yearly Income
           </FormComponents.Label>
-          <FormComponents.Input onChange={event => setIncome(event.target.value)} type="number"/>
+          <FormComponents.Input required onChange={event => setIncome(event.target.value)} type="number"/>
         </div>
         <div className="column">
           <FormComponents.Label>
             Estimated Credit Score
           </FormComponents.Label>
-          <FormComponents.Input min="300" max="850" onChange={event => setCredit(event.target.value)} type="number"/>
+          <FormComponents.Input min="300" max="850" required onChange={event => setCredit(event.target.value)} type="number"/>
         </div>
       </FormComponents.InfoSection>
 
       <FormComponents.Button
-        onClick={() => onSubmit({
-          price,
-          make,
-          model,
-          income,
-          credit
-        })}
+        type="submit"
       >
         SUBMIT
       </FormComponents.Button>
