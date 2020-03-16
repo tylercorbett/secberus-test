@@ -20,7 +20,7 @@ const Frame = styled.section(props => ({
   },
 }))
 
-const Form = () => {
+const Form = ({ onSubmit }) => {
   const [price, setPrice] = useState(null);
   const [make, setMake] = useState(null);
   const [model, setModel] = useState(null);
@@ -70,7 +70,17 @@ const Form = () => {
         </div>
       </FormComponents.InfoSection>
 
-      <FormComponents.Button>SUBMIT</FormComponents.Button>
+      <FormComponents.Button
+        onClick={() => onSubmit({
+          price,
+          make,
+          model,
+          income,
+          credit
+        })}
+      >
+        SUBMIT
+      </FormComponents.Button>
     </Frame>
   );
 };
