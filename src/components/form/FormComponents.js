@@ -29,3 +29,18 @@ export const Button = styled.button(props => ({
     cursor: 'pointer',
   },
 }))
+
+export const InfoSection = styled.section`
+  display: flex;
+  alignItems: center;
+  justifyContent: space-evenly;
+  background: coral;
+  padding: 2rem 1rem;
+  margin: 1.5rem 0;
+  backgroundColor: #f7f7f7;
+  borderRadius: .2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;

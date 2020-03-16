@@ -10,18 +10,6 @@ const Frame = styled.section(props => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    
-  },
-
-  '.info-section': {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    background: 'coral',
-    padding: '2rem 1rem',
-    margin: '1.5rem 0',
-    backgroundColor: '#f7f7f7',
-    borderRadius: '.2rem',
   },
 
   'h2': {
@@ -37,7 +25,7 @@ const Form = () => {
   return (
     <Frame>
       <h2>Auto Info</h2>
-      <section className="info-section">
+      <FormComponents.InfoSection>
         <div className="column">
           <FormComponents.Label>
             Auto Purchase Price
@@ -56,10 +44,10 @@ const Form = () => {
           </FormComponents.Label>
           <FormComponents.Input type="text"/>
         </div>
-      </section>
+      </FormComponents.InfoSection>
 
       <h2>User Info</h2>
-      <section className="info-section">
+      <FormComponents.InfoSection>
         <div className="column">
           <FormComponents.Label>
             Estimated Yearly Income
@@ -72,7 +60,7 @@ const Form = () => {
           </FormComponents.Label>
           <FormComponents.Input type="number"/>
         </div>
-      </section>
+      </FormComponents.InfoSection>
 
       <FormComponents.Button>SUBMIT</FormComponents.Button>
     </Frame>
