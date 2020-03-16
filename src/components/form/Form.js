@@ -36,19 +36,19 @@ const Form = ({ onSubmit }) => {
       <FormComponents.InfoSection>
         <div className="column">
           <FormComponents.Label>
-            Auto Purchase Price
+            Purchase Price
           </FormComponents.Label>
           <FormComponents.Input onChange={event => setPrice(event.target.value)} type="number"/>
         </div>
         <div className="column">
           <FormComponents.Label>
-            Auto Make
+            Make
           </FormComponents.Label>
           <FormComponents.Input onChange={event => setMake(event.target.value)} type="text"/>
         </div>
         <div className="column">
           <FormComponents.Label>
-            Auto Model
+            Model
           </FormComponents.Label>
           <FormComponents.Input onChange={event => setModel(event.target.value)} type="text"/>
         </div>
